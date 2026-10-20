@@ -1,15 +1,16 @@
 import { Controller, type Control, type FieldError, type FieldValues, type Path } from "react-hook-form";
 import './custom-input.css'
+import type { FormValues } from "../models/props.model";
 
-interface Props<T extends FieldValues>{
-    name: Path<T>,
-    control: Control<T>,
+interface Props{
+    name: keyof FormValues,
+    control: Control<FormValues>,
     label: string,
     type?: string,
     error?: FieldError
 }
 
-const InputForm = <T extends FieldValues>({name, control, label, type, error}: Props<T>) => {
+const InputForm = ({name, control, label, type, error}: Props) => {
      return(
         <div className="form-group">
             <label htmlFor={name as string}>{label}</label>

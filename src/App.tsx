@@ -9,8 +9,8 @@ function App() {
   return (
     // <BookReader/>
     // <FocusInput></FocusInput>
-    <ShoppingCart/>
-    // <PhoneBook/>
+    // <ShoppingCart/>
+    <PhoneBook/>
   )
 }
 

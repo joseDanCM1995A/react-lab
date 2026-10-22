@@ -1,16 +1,23 @@
-import BookReader from './components/hooks/useref/useref';
 import './App.css'
-import FocusInput from './components/hooks/useref/focus-input';
-import ShoppingCart from './components/hooks/useref/usememo';
-import PhoneBook from './components/hooks/usecallback/use-callback';
-
+import { ModalProvider } from './components/modal/context/modal-context'
+import { useModalContext } from './components/modal/context/use-modal-context'
+import { Modal } from './components/modal/modal'
 
 function App() {
+  const { setState } = useModalContext()
+
+  const openModal = () => {
+    setState(true)
+  }
+
   return (
-    // <BookReader/>
-    // <FocusInput></FocusInput>
-    // <ShoppingCart/>
-    <PhoneBook/>
+  <>
+    <Modal>
+      <h2>Hola EVZODA</h2>
+      <h3>Te quiero</h3>
+    </Modal>
+    <button onClick={openModal}>Abrete Sésamo</button>
+  </>
   )
 }
 

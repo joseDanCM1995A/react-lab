@@ -1,4 +1,5 @@
 import './App.css'
+import { AppRouter } from './appRouter'
 import { ModalProvider } from './components/modal/context/modal-context'
 import { useModalContext } from './components/modal/context/use-modal-context'
 import { Modal } from './components/modal/modal'
@@ -12,11 +13,8 @@ function App() {
 
   return (
   <>
-    <Modal>
-      <h2>Hola EVZODA</h2>
-      <h3>Te quiero</h3>
-    </Modal>
-    <button onClick={openModal}>Abrete Sésamo</button>
+      <h2>app main</h2>
+    {/* <button onClick={openModal}>Abrete Sésamo</button> */}
   </>
   )
 }
